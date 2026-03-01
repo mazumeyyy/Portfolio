@@ -18,3 +18,6 @@ View your app in AI Studio: https://ai.studio/apps/bc03bf02-6cd8-4e99-ab8c-92ca4
 2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
 3. Run the app:
    `npm run dev`
+
+# Portfolio
+Updated build settings for Netlify
