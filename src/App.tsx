@@ -4,19 +4,19 @@
  */
 
 import React from 'react';
-import { 
-  Github, 
-  Linkedin, 
-  Mail, 
-  Twitter, 
-  Youtube, 
-  Instagram, 
+import {
+  Github,
+  Linkedin,
+  Mail,
+  Twitter,
+  Youtube,
+  Instagram,
   Terminal,
-  Code2, 
-  Database, 
-  BrainCircuit, 
-  TestTube2, 
-  GraduationCap, 
+  Code2,
+  Database,
+  BrainCircuit,
+  TestTube2,
+  GraduationCap,
   Award,
   ChevronRight,
   MapPin,
@@ -102,7 +102,7 @@ export default function App() {
       <main className="max-w-5xl mx-auto px-6 py-16 md:py-32">
         {/* Hero Section */}
         <section id="about" className="mb-32">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -114,8 +114,8 @@ export default function App() {
               Mazum Paudel
             </h1>
             <p className="text-xl text-slate-400 mb-10 leading-relaxed max-w-3xl font-light">
-              Machine learning focused <code className="text-indigo-300">BSc CSIT</code> student. 
-              Currently engineering automated test systems at AdviseBridge. 
+              Machine learning focused <code className="text-indigo-300">BSc CSIT</code> student.
+              Currently engineering automated test systems at AdviseBridge.
               Building the bridge between data science and production-ready software.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -191,7 +191,7 @@ export default function App() {
                   <ul className="space-y-3">
                     {exp.description.map((point, i) => (
                       <li key={i} className="text-slate-400 text-sm leading-relaxed flex gap-3">
-                        <span className="text-indigo-500 font-mono">0{i+1}</span>
+                        <span className="text-indigo-500 font-mono">0{i + 1}</span>
                         {point}
                       </li>
                     ))}
@@ -249,10 +249,10 @@ export default function App() {
               Ready for the next sprint?
             </h2>
             <p className="text-slate-400 mb-12 max-w-xl mx-auto font-light">
-              I'm always looking for new challenges in Machine Learning and Automation. 
+              I'm always looking for new challenges in Machine Learning and Automation.
               Let's connect and discuss how I can contribute to your team.
             </p>
-            
+
             <div className="grid md:grid-cols-3 gap-6 mb-12">
               <div className="p-4 rounded-lg bg-slate-900/50 border border-slate-800">
                 <Mail size={18} className="mx-auto mb-3 text-indigo-500" />
@@ -268,13 +268,22 @@ export default function App() {
               </div>
             </div>
 
-            <a 
+            <a
               href="https://www.linkedin.com/in/mazum-paudel-b603472b1/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-bold rounded-md hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-500/20"
             >
               Connect on LinkedIn
+              <ArrowUpRight size={18} />
+            </a>
+            <a
+              href="/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-slate-800 text-white font-bold rounded-md hover:bg-slate-700 transition-all border border-slate-700 ml-4"
+            >
+              View Resume
               <ArrowUpRight size={18} />
             </a>
           </div>
