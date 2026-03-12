@@ -58,7 +58,7 @@ const SKILLS = [
 
 const EXPERIENCE = [
   {
-    role: "QA Automation Engineer Intern",
+    role: "QA Automation Engineer",
     company: "AdviseBridge",
     period: "2026 - Present",
     description: [
