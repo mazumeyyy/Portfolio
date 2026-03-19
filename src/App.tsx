@@ -235,8 +235,16 @@ export default function App() {
                 <p className="text-xs text-slate-500">Deerwalk Institute</p>
                 <div className="mt-4 pt-4 border-t border-slate-800 flex items-center justify-between">
                   <span className="text-[10px] font-mono text-slate-500">110 HOURS</span>
-                  <ArrowUpRight size={14} className="text-slate-600" />
+                  <a
+                    href="/DSML_certificate.jpeg"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate-600 hover:text-indigo-400 transition-colors"
+                  >
+                    <ArrowUpRight size={14} />
+                  </a>
                 </div>
+
               </div>
             </section>
           </div>
