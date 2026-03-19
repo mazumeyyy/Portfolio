@@ -60,7 +60,7 @@ const EXPERIENCE = [
   {
     role: "QA Automation Engineer",
     company: "AdviseBridge",
-    period: "2026 - Present",
+    period: "Jan 2026 - Present",
     description: [
       "Developing automated UI test scripts using Playwright (JS).",
       "Performing manual smoke, regression, and beta testing.",
@@ -71,7 +71,7 @@ const EXPERIENCE = [
   {
     role: "Business Analyst Intern",
     company: "TAI Inc.",
-    period: "2025 - 2025",
+    period: "Aug 2025 - Oct 2025",
     description: [
       "Conducted research for consultation projects and feasibility studies.",
       "Collaborated with stakeholders to translate requirements.",
