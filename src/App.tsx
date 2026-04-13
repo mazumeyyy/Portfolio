@@ -65,7 +65,7 @@ const EXPERIENCE = [
       "Developing automated UI test scripts using Playwright (JS).",
       "Performing manual smoke, regression, and beta testing.",
       "Tracking defects and collaborating on feature validation.",
-      "Validating endpoints using Postman API testing."
+      "Validating endpoints using API testing."
     ]
   },
   {
