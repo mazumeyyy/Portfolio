@@ -45,7 +45,7 @@ const SKILLS = [
     items: ["scikit-learn", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Logistic Regression"]
   },
   {
-    category: "Automation",
+    category: "SDET & Testing",
     icon: TestTube2,
     items: ["Playwright", "Manual Testing", "Smoke Testing", "Postman API"]
   },
@@ -58,8 +58,8 @@ const SKILLS = [
 
 const EXPERIENCE = [
   {
-    role: "QA Automation Engineer",
-    company: "AdviseBridge",
+    role: "SDET",
+    company: "AdviseBridge" & "PineVisa"
     period: "Jan 2026 - Present",
     description: [
       "Developing automated UI test scripts using Playwright (JS).",
