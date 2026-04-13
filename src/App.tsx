@@ -59,7 +59,7 @@ const SKILLS = [
 const EXPERIENCE = [
   {
     role: "SDET",
-    company: "AdviseBridge" & "PineVisa"
+    company: "AdviseBridge / PineVisa",
     period: "Jan 2026 - Present",
     description: [
       "Developing automated UI test scripts using Playwright (JS).",
@@ -115,7 +115,7 @@ export default function App() {
             </h1>
             <p className="text-xl text-slate-400 mb-10 leading-relaxed max-w-3xl font-light">
               Machine learning focused <code className="text-indigo-300">BSc CSIT</code> student.
-              Currently engineering automated test systems at AdviseBridge.
+              Currently engineering automated test systems at AdviseBridge and PineVisa.
               Building the bridge between data science and production-ready software.
             </p>
             <div className="flex flex-wrap gap-4">
