@@ -24,7 +24,6 @@ import {
 } from 'lucide-react';
 import { motion } from 'motion/react';
 
-
 const SOCIAL_LINKS = [
   { icon: Github,    href: "https://github.com/mazumeyyy",                         label: "GitHub" },
   { icon: Linkedin,  href: "https://www.linkedin.com/in/mazum-paudel-b603472b1/", label: "LinkedIn" },
@@ -33,7 +32,6 @@ const SOCIAL_LINKS = [
   { icon: Instagram, href: "https://www.instagram.com/thatnepalikti/",             label: "Instagram" },
   { icon: () => <span className="text-base leading-none">🥟</span>, href: "https://buymemomo.com/thatnepalikti", label: "BuyMeMomo" },
 ];
-
 
 const SKILLS = [
   {
@@ -58,7 +56,6 @@ const SKILLS = [
   }
 ];
 
-
 const EXPERIENCE = [
   {
     role: "SDET",
@@ -82,7 +79,6 @@ const EXPERIENCE = [
     ]
   }
 ];
-
 
 export default function App() {
   return (
@@ -124,8 +120,6 @@ export default function App() {
               Currently engineering automated test systems at AdviseBridge and PineVisa.
               Building the bridge between data science and production-ready software.
             </p>
-
-            {/* Social Links — BuyMeMomo auto-included via SOCIAL_LINKS */}
             <div className="flex flex-wrap gap-4">
               {SOCIAL_LINKS.map((social) => (
                 <a
@@ -281,37 +275,41 @@ export default function App() {
               </div>
             </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-wrap justify-center gap-4">
-              <a
-                href="https://www.linkedin.com/in/mazum-paudel-b603472b1/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-bold rounded-md hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-500/20"
-              >
-                Connect on LinkedIn
-                <ArrowUpRight size={18} />
-              </a>
-              <a
-                href="/resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-slate-800 text-white font-bold rounded-md hover:bg-slate-700 transition-all border border-slate-700"
-              >
-                View Resume
-                <ArrowUpRight size={18} />
-              </a>
+            {/* Action Buttons — two rows */}
+            <div className="flex flex-col items-center gap-4">
 
-              {/* BuyMeMomo Button */}
+              {/* Row 1: LinkedIn + Resume */}
+              <div className="flex flex-wrap justify-center gap-4">
+                <a
+                  href="https://www.linkedin.com/in/mazum-paudel-b603472b1/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-bold rounded-md hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-500/20"
+                >
+                  Connect on LinkedIn
+                  <ArrowUpRight size={18} />
+                </a>
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-slate-800 text-white font-bold rounded-md hover:bg-slate-700 transition-all border border-slate-700"
+                >
+                  View Resume
+                  <ArrowUpRight size={18} />
+                </a>
+              </div>
+
+              {/* Row 2: Buy me a momo — centered alone */}
               <a
                 href="https://buymemomo.com/thatnepalikti"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-slate-800 text-white font-bold rounded-md hover:bg-slate-700 transition-all border border-yellow-500/40 hover:border-yellow-400"
+                className="inline-flex items-center gap-3 px-10 py-4 bg-slate-800 text-white font-bold rounded-md hover:bg-slate-700 transition-all border border-slate-700"
               >
                 🥟 Buy me a momo
-              
               </a>
+
             </div>
           </div>
         </section>
@@ -325,7 +323,6 @@ export default function App() {
             <span>+</span>
             <span className="text-indigo-500">Tailwind</span>
           </div>
-          {/* Footer icons — BuyMeMomo auto-included via SOCIAL_LINKS */}
           <div className="flex gap-6">
             {SOCIAL_LINKS.map((social) => (
               <a
@@ -345,4 +342,3 @@ export default function App() {
     </div>
   );
 }
-
