@@ -25,11 +25,11 @@ import {
 import { motion } from 'motion/react';
 
 const SOCIAL_LINKS = [
-  { icon: Github,    href: "https://github.com/mazumeyyy",                         label: "GitHub" },
-  { icon: Linkedin,  href: "https://www.linkedin.com/in/mazum-paudel-b603472b1/", label: "LinkedIn" },
-  { icon: Twitter,   href: "https://x.com/thatnepaliktii",                         label: "X (Twitter)" },
-  { icon: Youtube,   href: "https://www.youtube.com/@THATNEPALIKTI",               label: "YouTube" },
-  { icon: Instagram, href: "https://www.instagram.com/thatnepalikti/",             label: "Instagram" },
+  { icon: Github, href: "https://github.com/mazumeyyy", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/mazum-paudel-b603472b1/", label: "LinkedIn" },
+  { icon: Twitter, href: "https://x.com/thatnepaliktii", label: "X (Twitter)" },
+  { icon: Youtube, href: "https://www.youtube.com/@THATNEPALIKTI", label: "YouTube" },
+  { icon: Instagram, href: "https://www.instagram.com/thatnepalikti/", label: "Instagram" },
   { icon: () => <span className="text-base leading-none">🥟</span>, href: "https://buymemomo.com/thatnepalikti", label: "BuyMeMomo" },
 ];
 
@@ -92,10 +92,10 @@ export default function App() {
             <span>mazum_paudel.init()</span>
           </div>
           <div className="flex gap-6 text-xs font-mono uppercase tracking-widest text-slate-500">
-            <a href="#about"      className="hover:text-indigo-400 transition-colors">.root</a>
-            <a href="#skills"     className="hover:text-indigo-400 transition-colors">.skills</a>
+            <a href="#about" className="hover:text-indigo-400 transition-colors">.root</a>
+            <a href="#skills" className="hover:text-indigo-400 transition-colors">.skills</a>
             <a href="#experience" className="hover:text-indigo-400 transition-colors">.work</a>
-            <a href="#contact"    className="hover:text-indigo-400 transition-colors">.contact</a>
+            <a href="#contact" className="hover:text-indigo-400 transition-colors">.contact</a>
           </div>
         </div>
       </nav>
@@ -300,14 +300,15 @@ export default function App() {
                 </a>
               </div>
 
-              {/* Row 2: Buy me a momo — centered alone */}
+              {/* Row 2: buymemomo — centered alone */}
               <a
                 href="https://buymemomo.com/thatnepalikti"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-10 py-4 bg-slate-800 text-white font-bold rounded-md hover:bg-slate-700 transition-all border border-slate-700"
               >
-                🥟 Buy me a momo
+                🥟 buymemomo
+                <ArrowUpRight size={18} />
               </a>
 
             </div>
