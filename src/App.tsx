@@ -18,20 +18,22 @@ import {
   TestTube2,
   GraduationCap,
   Award,
-  ChevronRight,
   MapPin,
   Phone,
-  ArrowUpRight
+  ArrowUpRight,
 } from 'lucide-react';
 import { motion } from 'motion/react';
 
+
 const SOCIAL_LINKS = [
-  { icon: Github, href: "https://github.com/mazumeyyy", label: "GitHub" },
-  { icon: Linkedin, href: "https://www.linkedin.com/in/mazum-paudel-b603472b1/", label: "LinkedIn" },
-  { icon: Twitter, href: "https://x.com/thatnepaliktii", label: "X (Twitter)" },
-  { icon: Youtube, href: "https://www.youtube.com/@THATNEPALIKTI", label: "YouTube" },
-  { icon: Instagram, href: "https://www.instagram.com/thatnepalikti/", label: "Instagram" },
+  { icon: Github,    href: "https://github.com/mazumeyyy",                         label: "GitHub" },
+  { icon: Linkedin,  href: "https://www.linkedin.com/in/mazum-paudel-b603472b1/", label: "LinkedIn" },
+  { icon: Twitter,   href: "https://x.com/thatnepaliktii",                         label: "X (Twitter)" },
+  { icon: Youtube,   href: "https://www.youtube.com/@THATNEPALIKTI",               label: "YouTube" },
+  { icon: Instagram, href: "https://www.instagram.com/thatnepalikti/",             label: "Instagram" },
+  { icon: () => <span className="text-base leading-none">🥟</span>, href: "https://buymemomo.com/thatnepalikti", label: "BuyMeMomo" },
 ];
+
 
 const SKILLS = [
   {
@@ -55,6 +57,7 @@ const SKILLS = [
     items: ["SQL", "Git", "Trello", "Confluence", "Jupyter"]
   }
 ];
+
 
 const EXPERIENCE = [
   {
@@ -80,9 +83,11 @@ const EXPERIENCE = [
   }
 ];
 
+
 export default function App() {
   return (
     <div className="min-h-screen font-sans selection:bg-indigo-500/30 selection:text-indigo-200">
+
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/80 backdrop-blur-md">
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
@@ -91,15 +96,16 @@ export default function App() {
             <span>mazum_paudel.init()</span>
           </div>
           <div className="flex gap-6 text-xs font-mono uppercase tracking-widest text-slate-500">
-            <a href="#about" className="hover:text-indigo-400 transition-colors">.root</a>
-            <a href="#skills" className="hover:text-indigo-400 transition-colors">.skills</a>
+            <a href="#about"      className="hover:text-indigo-400 transition-colors">.root</a>
+            <a href="#skills"     className="hover:text-indigo-400 transition-colors">.skills</a>
             <a href="#experience" className="hover:text-indigo-400 transition-colors">.work</a>
-            <a href="#contact" className="hover:text-indigo-400 transition-colors">.contact</a>
+            <a href="#contact"    className="hover:text-indigo-400 transition-colors">.contact</a>
           </div>
         </div>
       </nav>
 
       <main className="max-w-5xl mx-auto px-6 py-16 md:py-32">
+
         {/* Hero Section */}
         <section id="about" className="mb-32">
           <motion.div
@@ -118,6 +124,8 @@ export default function App() {
               Currently engineering automated test systems at AdviseBridge and PineVisa.
               Building the bridge between data science and production-ready software.
             </p>
+
+            {/* Social Links — BuyMeMomo auto-included via SOCIAL_LINKS */}
             <div className="flex flex-wrap gap-4">
               {SOCIAL_LINKS.map((social) => (
                 <a
@@ -157,9 +165,7 @@ export default function App() {
                 <h3 className="font-bold text-white mb-4 text-sm uppercase tracking-wider">{skill.category}</h3>
                 <div className="flex flex-wrap gap-2">
                   {skill.items.map(item => (
-                    <span key={item} className="dev-badge">
-                      {item}
-                    </span>
+                    <span key={item} className="dev-badge">{item}</span>
                   ))}
                 </div>
               </motion.div>
@@ -175,7 +181,7 @@ export default function App() {
               <div className="h-px flex-1 bg-slate-800"></div>
             </div>
             <div className="space-y-12">
-              {EXPERIENCE.map((exp, idx) => (
+              {EXPERIENCE.map((exp) => (
                 <motion.div
                   key={exp.company}
                   initial={{ opacity: 0, x: -10 }}
@@ -244,7 +250,6 @@ export default function App() {
                     <ArrowUpRight size={14} />
                   </a>
                 </div>
-
               </div>
             </section>
           </div>
@@ -276,24 +281,37 @@ export default function App() {
               </div>
             </div>
 
-            <a
-              href="https://www.linkedin.com/in/mazum-paudel-b603472b1/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-bold rounded-md hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-500/20"
-            >
-              Connect on LinkedIn
-              <ArrowUpRight size={18} />
-            </a>
-            <a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-slate-800 text-white font-bold rounded-md hover:bg-slate-700 transition-all border border-slate-700 ml-4"
-            >
-              View Resume
-              <ArrowUpRight size={18} />
-            </a>
+            {/* Action Buttons */}
+            <div className="flex flex-wrap justify-center gap-4">
+              <a
+                href="https://www.linkedin.com/in/mazum-paudel-b603472b1/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-bold rounded-md hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-500/20"
+              >
+                Connect on LinkedIn
+                <ArrowUpRight size={18} />
+              </a>
+              <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-slate-800 text-white font-bold rounded-md hover:bg-slate-700 transition-all border border-slate-700"
+              >
+                View Resume
+                <ArrowUpRight size={18} />
+              </a>
+
+              {/* BuyMeMomo Button */}
+              <a
+                href="https://buymemomo.com/thatnepalikti"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-slate-800 text-white font-bold rounded-md hover:bg-slate-700 transition-all border border-yellow-500/40 hover:border-yellow-400"
+              >
+                🥟 Support Me
+              </a>
+            </div>
           </div>
         </section>
       </main>
@@ -306,6 +324,7 @@ export default function App() {
             <span>+</span>
             <span className="text-indigo-500">Tailwind</span>
           </div>
+          {/* Footer icons — BuyMeMomo auto-included via SOCIAL_LINKS */}
           <div className="flex gap-6">
             {SOCIAL_LINKS.map((social) => (
               <a
@@ -325,3 +344,4 @@ export default function App() {
     </div>
   );
 }
+
