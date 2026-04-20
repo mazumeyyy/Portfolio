@@ -309,7 +309,8 @@ export default function App() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-slate-800 text-white font-bold rounded-md hover:bg-slate-700 transition-all border border-yellow-500/40 hover:border-yellow-400"
               >
-                🥟 Support Me
+                🥟 Buy me a momo
+              
               </a>
             </div>
           </div>
