@@ -300,14 +300,14 @@ export default function App() {
                 </a>
               </div>
 
-              {/* Row 2: buymemomo — centered alone */}
+              {/* Row 2: Buymemomo — centered alone */}
               <a
                 href="https://buymemomo.com/thatnepalikti"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-10 py-4 bg-slate-800 text-white font-bold rounded-md hover:bg-slate-700 transition-all border border-slate-700"
               >
-                🥟 buymemomo
+                🥟 Buymemomo
                 <ArrowUpRight size={18} />
               </a>
 
