@@ -30,7 +30,7 @@ const SOCIAL_LINKS = [
   { icon: Twitter, href: "https://x.com/thatnepaliktii", label: "X (Twitter)" },
   { icon: Youtube, href: "https://www.youtube.com/@THATNEPALIKTI", label: "YouTube" },
   { icon: Instagram, href: "https://www.instagram.com/thatnepalikti/", label: "Instagram" },
-  { icon: () => <span className="text-base leading-none">🥟</span>, href: "https://buymemomo.com/thatnepalikti", label: "BuyMeMomo" },
+  
 ];
 
 const SKILLS = [
