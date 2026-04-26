@@ -110,7 +110,7 @@ export default function App() {
             transition={{ duration: 0.5 }}
           >
             <div className="inline-block px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-mono mb-6">
-              Available for Data Science and AI/ML Internships
+              Available for Data Science and AI/ML Roles
             </div>
             <h1 className="text-6xl md:text-8xl font-bold mb-8 tracking-tighter text-white">
               Mazum Paudel
