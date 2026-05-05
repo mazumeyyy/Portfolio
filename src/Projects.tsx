@@ -6,6 +6,7 @@
 import React from 'react';
 import { ArrowUpRight, Github } from 'lucide-react';
 import { motion } from 'motion/react';
+import { hr } from 'motion/react-client';
 
 const PROJECTS = [
   {
@@ -24,6 +25,12 @@ const PROJECTS = [
         tags: ["Python", "Scraping"],
         href: "https://github.com/mazumeyyy/ekantipur-scraper",
       },
+      {
+        name : "Sentiment Analysis — Hotel Reviews",
+        description: "Analyzes sentiment of hotel reviews using NLP and Machine Learning.",
+        tags: ["Python", "NLP","Pandas","scikit-learn", "Machine Learning"],
+        href: "https://github.com/mazumeyyy/sentiment-analysis-hotel-reviews-rn",
+      }
     ],
   },
   {
