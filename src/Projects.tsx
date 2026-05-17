@@ -21,8 +21,8 @@ const PROJECTS = [
       },
       {
         name: "Ekantipur Scraper",
-        description: "Scrapes news articles from Ekantipur.com.",
-        tags: ["Python", "Scraping"],
+        description: "Scrapes news articles and cartoon from Ekantipur.com.",
+        tags: ["Python", "Scraping", "Automation"],
         href: "https://github.com/mazumeyyy/ekantipur-scraper",
       },
       {
