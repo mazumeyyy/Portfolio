@@ -64,7 +64,7 @@ const PROJECTS = [
     ],
   },
   {
-    group: "College Projects",
+    group: "College Practicals",
     emoji: "🎓",
     items: [
       {
