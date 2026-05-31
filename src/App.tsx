@@ -81,16 +81,17 @@ const EXPERIENCE = [
 
 export default function App() {
   return (
-    <div className="min-h-screen font-sans selection:bg-indigo-500/30 selection:text-indigo-200">
+    <div className="min-h-screen font-sans selection:bg-indigo-500/30 selection:text-indigo-200 overflow-x-hidden">
 
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/80 backdrop-blur-md">
-        <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="max-w-5xl mx-auto px-6 py-4 md:h-16 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2 font-mono font-bold text-indigo-400">
             <Terminal size={18} />
             <span>mazum_paudel.init()</span>
           </div>
-          <div className="flex gap-6 text-xs font-mono uppercase tracking-widest text-slate-500">
+          {/* Added flex-wrap and layout adjustments for tiny screens */}
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs font-mono uppercase tracking-widest text-slate-500">
             <a href="#about"      className="hover:text-indigo-400 transition-colors">.root</a>
             <a href="#skills"     className="hover:text-indigo-400 transition-colors">.skills</a>
             <a href="#experience" className="hover:text-indigo-400 transition-colors">.work</a>
@@ -116,13 +117,14 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="inline-block px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-mono mb-6">
+            {/* Added max-w-max and text-center/balance protection */}
+            <div className="inline-block px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-mono mb-6 max-w-full text-balance">
               Available for Data Science and AI/ML Roles
             </div>
-            <h1 className="text-6xl md:text-8xl font-bold mb-8 tracking-tighter text-white">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold mb-8 tracking-tighter text-white break-words">
               Mazum Paudel
             </h1>
-            <p className="text-xl text-slate-400 mb-10 leading-relaxed max-w-3xl font-light">
+            <p className="text-lg sm:text-xl text-slate-400 mb-10 leading-relaxed max-w-3xl font-light">
               Machine learning focused <code className="text-indigo-300">BSc CSIT</code> student.
               Currently engineering automated test systems at AdviseBridge and PineVisa.
               Building the bridge between data science and production-ready software.
@@ -190,7 +192,7 @@ export default function App() {
                   viewport={{ once: true }}
                   className="group"
                 >
-                  <div className="flex items-center justify-between mb-2">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 mb-2">
                     <h3 className="text-lg font-bold text-white group-hover:text-indigo-400 transition-colors">{exp.role}</h3>
                     <span className="font-mono text-xs text-slate-500">{exp.period}</span>
                   </div>
@@ -216,7 +218,7 @@ export default function App() {
               </div>
               <div className="dev-card">
                 <div className="flex items-start gap-4">
-                  <div className="p-2 bg-indigo-500/10 text-indigo-400 rounded">
+                  <div className="p-2 bg-indigo-500/10 text-indigo-400 rounded shrink-0">
                     <GraduationCap size={20} />
                   </div>
                   <div>
@@ -258,17 +260,17 @@ export default function App() {
 
         {/* Contact Section */}
         <section id="contact">
-          <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-8 md:p-16 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+          <div className="border border-slate-800 bg-slate-900/30 rounded-2xl p-6 md:p-16 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white mb-6 tracking-tight text-balance">
               Ready for the next sprint?
             </h2>
-            <p className="text-slate-400 mb-12 max-w-xl mx-auto font-light">
+            <p className="text-slate-400 mb-12 max-w-xl mx-auto font-light text-sm sm:text-base">
               I'm always looking for new challenges in Machine Learning and Automation.
               Let's connect and discuss how I can contribute to your team.
             </p>
 
-            <div className="grid md:grid-cols-3 gap-6 mb-12">
-              <div className="p-4 rounded-lg bg-slate-900/50 border border-slate-800">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 mb-12">
+              <div className="p-4 rounded-lg bg-slate-900/50 border border-slate-800 break-all">
                 <Mail size={18} className="mx-auto mb-3 text-indigo-500" />
                 <p className="text-xs font-mono text-slate-300">mazumpaudel02@gmail.com</p>
               </div>
@@ -284,14 +286,12 @@ export default function App() {
 
             {/* Action Buttons */}
             <div className="flex flex-col items-center gap-4">
-
-              {/* Row 1: LinkedIn + Resume */}
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-wrap justify-center gap-4 w-full sm:w-auto">
                 <a
                   href="https://www.linkedin.com/in/mazum-paudel-b603472b1/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-indigo-600 text-white font-bold rounded-md hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-500/20"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-indigo-600 text-white font-bold rounded-md hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-500/20 w-full sm:w-auto text-sm"
                 >
                   Connect on LinkedIn
                   <ArrowUpRight size={18} />
@@ -300,24 +300,22 @@ export default function App() {
                   href="/resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-slate-800 text-white font-bold rounded-md hover:bg-slate-700 transition-all border border-slate-700"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-slate-800 text-white font-bold rounded-md hover:bg-slate-700 transition-all border border-slate-700 w-full sm:w-auto text-sm"
                 >
                   View Resume
                   <ArrowUpRight size={18} />
                 </a>
               </div>
 
-              {/* Row 2: BuyMeMomo — centered alone */}
               <a
                 href="https://buymemomo.com/thatnepalikti"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-10 py-4 bg-slate-800 text-white font-bold rounded-md hover:bg-slate-700 transition-all border border-slate-700"
+                className="inline-flex items-center justify-center gap-2 px-10 py-4 bg-slate-800 text-white font-bold rounded-md hover:bg-slate-700 transition-all border border-slate-700 w-full sm:w-auto text-sm"
               >
                 🥟 BuyMeMomo
                 <ArrowUpRight size={18} />
               </a>
-
             </div>
           </div>
         </section>
@@ -350,4 +348,3 @@ export default function App() {
     </div>
   );
 }
-
